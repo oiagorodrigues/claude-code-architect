@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cronograma de estudo — Claude Certified Architect (Foundations)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.13.0/tabler-icons.min.css" integrity="sha384-JpKzU+UK2Lfi29ynRehGoFjjZEhJdd0ObqBlDg/G5sZNGOuKxMMHSuPSB6AzU1rW" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Cronograma de estudo — CCA Foundations</h1>
+    <p>Claude Certified Architect — Foundations | Anthropic</p>
+    <p style="margin-top:8px;font-size:13px;color:var(--text-secondary);display:flex;align-items:center;justify-content:center;gap:6px">Iago Rodrigues <a href="https://www.linkedin.com/in/oiagorodrigues/" target="_blank" aria-label="LinkedIn de Iago Rodrigues" style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:4px;background:#0A66C2;color:#fff;text-decoration:none" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></p>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><div class="stat-label">Duração total</div><div class="stat-value">8 semanas</div></div>
+    <div class="stat"><div class="stat-label">Horas estimadas</div><div class="stat-value">~80h</div></div>
+    <div class="stat"><div class="stat-label">Domínios</div><div class="stat-value">5</div></div>
+    <div class="stat"><div class="stat-label">Meta no simulado</div><div class="stat-value">>900/1000</div></div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-text">
+      <span>Progresso geral</span>
+      <span id="progress-label">0 de 24 tópicos</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span>Domínios:</span>
+    <span class="week-badge b-purple">Agentic (27%)</span>
+    <span class="week-badge b-blue">Claude Code (20%)</span>
+    <span class="week-badge b-coral">Prompt eng. (20%)</span>
+    <span class="week-badge b-teal">MCP & tools (18%)</span>
+    <span class="week-badge b-amber">Context (15%)</span>
+  </div>
+  <div class="resource-legend">
+    <span>Recursos:</span>
+    <span class="resource-legend-item"><span class="resource-legend-swatch swatch-official"></span> Oficial Anthropic</span>
+    <span class="resource-legend-item"><span class="resource-legend-swatch swatch-extra"></span> Complementar</span>
+  </div>
+
+  <!-- SEMANA 1 -->
+  <div class="week open" id="w1">
+    <button type="button" class="week-header" data-toggle="w1" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 1 — Fundamentos e API</span>
+      <span class="week-sub">~8h</span>
+      <span class="week-badge b-coral">Prompt eng.</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Claude 101 — conceitos e funcionalidades core</div>
+          <div class="topic-desc">Entender modelos disponíveis, system prompts, limites, e como Claude se comporta. Base para todo o resto.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/claude-101" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Claude 101</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Building with the Claude API — módulos iniciais</div>
+          <div class="topic-desc">Autenticação, chamadas básicas, streaming, roles (user/assistant/system). Comece os primeiros módulos do curso de 8+ horas.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Building with the Claude API</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Prática: fazer chamadas reais à API</div>
+          <div class="topic-desc">Criar um script simples que envia prompts e recebe respostas. Testar diferentes temperaturas e system prompts.</div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">GitHub — Study Guide (paullarionov)</div>
+          <div class="bonus-item-desc">Baixar o guia e ler a seção de Claude API. Usar como referência paralela ao longo das 8 semanas — cobre os 5 domínios com exercícios práticos.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://github.com/paullarionov/claude-certified-architect" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>GitHub repo</a></div>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">Medium — Tutor prompts por domínio</div>
+          <div class="bonus-item-desc">Copiar o tutor prompt do domínio de API/Prompt Eng. e usar o Claude como tutor interativo enquanto estuda.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://medium.com/data-science-collective/the-complete-claude-architect-study-guide-with-code-and-tutor-prompts-01f524e95c92" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Study guide + tutor prompts</a></div>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">CertSafari — 623 questões gratuitas + exam guide oficial (PDF)</div>
+          <div class="bonus-item-desc">Maior banco de questões gratuito, sem cadastro, com modo por domínio específico. Inclui link para o exam guide oficial da Anthropic em PDF. Usar ao longo das 8 semanas para praticar cada domínio conforme estuda.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://www.certsafari.com/anthropic/claude-certified-architect" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>CertSafari — 623 questões</a><a class="resource-extra" href="https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F8lsy243ftffjjy1cx9lm3o2bw%2Fpublic%2F1773274827%2FClaude+Certified+Architect+%E2%80%93+Foundations+Certification+Exam+Guide.pdf" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Exam guide oficial (PDF)</a></div>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">Ravn — Study Guide (EN/ES/PT) + simulado prático</div>
+          <div class="bonus-item-desc">Guia de estudo completo disponível em português, com simulado prático interativo e PDF para download. Usar como referência paralela ao longo das 8 semanas.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://ravnhq.github.io/claude-certified-architect/guides/pt.html" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Guia em PT</a><a class="resource-extra" href="https://ravnhq.github.io/claude-certified-architect/practical/pt.html" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Simulado prático PT</a><a class="resource-extra" href="https://ravnhq.github.io/claude-certified-architect/index.html" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Todos os idiomas</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 2 -->
+  <div class="week" id="w2">
+    <button type="button" class="week-header" data-toggle="w2" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 2 — Prompt engineering e structured output</span>
+      <span class="week-sub">~9h</span>
+      <span class="week-badge b-coral">Prompt eng.</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Building with the Claude API — módulos avançados</div>
+          <div class="topic-desc">Prompt engineering avançado: few-shot, chain-of-thought, role framing, critérios explícitos, e estratégias de retry com validação.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Building with the Claude API</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Structured output com JSON schemas</div>
+          <div class="topic-desc">Usar tool_use para forçar saída estruturada. Validação de output, edge cases, e multi-pass review. Tema cobrado no exame.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Tool use docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Prática: extração de dados de documentos</div>
+          <div class="topic-desc">Construir um sistema que extrai informações de texto não estruturado e valida com JSON schema. Cenário realista do exame.</div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">GitHub — Exercícios de structured output (paullarionov)</div>
+          <div class="bonus-item-desc">Seção de exercícios práticos de structured output e tool design do guia. Treinar padrões e anti-patterns que aparecem nos cenários.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://github.com/paullarionov/claude-certified-architect/blob/main/guide_en.MD" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Guide — Prompt eng. section</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 3 -->
+  <div class="week" id="w3">
+    <button type="button" class="week-header" data-toggle="w3" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 3 — Claude Code na prática</span>
+      <span class="week-sub">~9h</span>
+      <span class="week-badge b-blue">Claude Code</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Claude Code 101 + Claude Code in Action</div>
+          <div class="topic-desc">Instalação, uso básico, geração de código, refatoração, debugging, documentação. Dois cursos oficiais que cobrem o essencial.</div>
+          <div class="resource-row">
+            <a class="resource" href="https://anthropic.skilljar.com/claude-code-101" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Claude Code 101</a>
+            <a class="resource" href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Code in Action</a>
+          </div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">CLAUDE.md, custom commands e plan mode</div>
+          <div class="topic-desc">Hierarquia de configuração do CLAUDE.md, criação de slash commands personalizados, quando usar plan mode vs execução direta.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Claude Code docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Introduction to agent skills</div>
+          <div class="topic-desc">Criar, configurar e distribuir skills reutilizáveis no Claude Code. Cobrado no exame como parte do domínio de Claude Code.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/introduction-to-agent-skills" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Agent Skills</a></div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">Coursera / Vanderbilt — Claude Code: Software Engineering with AI Agents</div>
+          <div class="bonus-item-desc">Aprofundamento com patterns avançados: "big prompts", Best-of-N, command libraries, avaliação de qualidade de código, e git worktrees com subagents. Audit gratuito disponível.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://www.coursera.org/learn/claude-code" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Coursera — Vanderbilt</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 4 -->
+  <div class="week" id="w4">
+    <button type="button" class="week-header" data-toggle="w4" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 4 — Claude Code avançado + subagents</span>
+      <span class="week-sub">~8h</span>
+      <span class="week-badge b-blue">Claude Code</span>
+      <span class="week-badge b-purple">Agentic</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Introduction to subagents</div>
+          <div class="topic-desc">Delegar tarefas com sub-agentes, gerenciar contexto entre agentes, workflows especializados. Ponte entre Claude Code e arquitetura agêntica.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/introduction-to-subagents" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Subagents</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">CI/CD e batch processing com Claude Code</div>
+          <div class="topic-desc">Integrar Claude Code em pipelines de CI/CD, processar múltiplos arquivos, automação de workflows de desenvolvimento.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Claude Code docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Prática: refatorar um projeto real</div>
+          <div class="topic-desc">Usar Claude Code para refatorar, documentar e testar um codebase existente. Treinar a decisão entre plan mode e execução direta.</div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">Tutorials Dojo — Claude Agent SDK Cheat Sheet</div>
+          <div class="bonus-item-desc">Referência rápida do Agent SDK. Imprimir ou salvar para consulta durante as semanas de prática agêntica.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://tutorialsdojo.com/claude-agent-sdk/" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Agent SDK Cheat Sheet</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 5 -->
+  <div class="week" id="w5">
+    <button type="button" class="week-header" data-toggle="w5" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 5 — MCP e tool design</span>
+      <span class="week-sub">~10h</span>
+      <span class="week-badge b-teal">MCP & tools</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Introduction to Model Context Protocol</div>
+          <div class="topic-desc">Construir servidores e clientes MCP em Python. Dominar os 3 primitivos: tools, resources e prompts.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/introduction-to-model-context-protocol" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Intro to MCP</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Tool design best practices</div>
+          <div class="topic-desc">Descrições claras de ferramentas, respostas de erro estruturadas, distribuição de tools, e configuração MCP em produção.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Tool use docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Prática: construir um MCP server</div>
+          <div class="topic-desc">Criar um servidor MCP funcional que conecta Claude a um serviço externo (banco de dados, API, sistema de arquivos).</div>
+          <div class="resource-row"><a class="resource-extra" href="https://modelcontextprotocol.io/docs/develop/build-server" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>MCP oficial — Build a server</a></div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">DeepLearning.AI — MCP: Build Rich-Context AI Apps with Anthropic</div>
+          <div class="bonus-item-desc">Curso curto e hands-on feito com a Anthropic. Construir chatbot MCP-compatible, deployar um MCP server, e conectar a servidores open-source com FastMCP. Gratuito durante o beta.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>DeepLearning.AI — MCP</a></div>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">Hugging Face — Model Context Protocol Course</div>
+          <div class="bonus-item-desc">Curso mais profundo (3 units, ~8-12h) feito em parceria com Anthropic. Cobre conceitos, implementação com SDKs, e projetos reais. Emite certificado gratuito.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://huggingface.co/learn/mcp-course/en/unit0/introduction" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>HF — MCP Course</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 6 -->
+  <div class="week" id="w6">
+    <button type="button" class="week-header" data-toggle="w6" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 6 — Arquitetura agêntica e orquestração</span>
+      <span class="week-sub">~10h</span>
+      <span class="week-badge b-purple">Agentic (27%)</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">MCP advanced topics</div>
+          <div class="topic-desc">Sampling, notifications, file system access, transport mechanisms para servidores MCP em produção.</div>
+          <div class="resource-row"><a class="resource" href="https://anthropic.skilljar.com/model-context-protocol-advanced-topics" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>MCP Advanced</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Agent SDK e agentic loops</div>
+          <div class="topic-desc">Projetar sistemas multi-agente com Claude Agent SDK. Hub-and-spoke orchestration, task decomposition, hooks vs prompts, session management.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/agents-and-tools" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Agents & tools docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Prática: agente de suporte ao cliente</div>
+          <div class="topic-desc">Construir um agente que lida com devoluções e disputas de cobrança usando tools MCP para acessar backends. Cenário realista do exame.</div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">KodeKloud — Building AI Agents with Claude Agent SDK</div>
+          <div class="bonus-item-desc">Labs hands-on progressivos: single-turn → multi-agent com AWS. Cobre Skills, Subagents e MCP com infraestrutura real. Único curso com labs interativos no Agent SDK. Pago (assinatura KodeKloud).</div>
+          <div class="resource-row"><a class="resource-extra" href="https://kodekloud.com/courses/learn-by-doing-building-ai-agents-with-claude-agent-sdk" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>KodeKloud — Agent SDK</a></div>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">SerpAPI — Build an AI Agent with Claude Agent SDK (tutorial)</div>
+          <div class="bonus-item-desc">Tutorial gratuito passo a passo para construir um agente funcional com o Agent SDK. Bom para praticar antes do lab de suporte ao cliente.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://serpapi.com/blog/build-an-ai-agent-with-claude-agent-sdk/" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>SerpAPI — Agent tutorial</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 7 -->
+  <div class="week" id="w7">
+    <button type="button" class="week-header" data-toggle="w7" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 7 — Context, evals e reliability</span>
+      <span class="week-sub">~9h</span>
+      <span class="week-badge b-amber">Context (15%)</span>
+      <span class="week-badge b-green">Evals</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Context management em produção</div>
+          <div class="topic-desc">Progressive summarization (e seus riscos), posicionamento de contexto, degradação de contexto, information provenance. Domínio de 15% do exame.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Prompt eng. docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Evaluations e métricas de qualidade</div>
+          <div class="topic-desc">Projetar evals para medir se o sistema funciona bem. Métricas, benchmarks, e quando escalar para revisão humana.</div>
+          <div class="resource-row"><a class="resource" href="https://docs.anthropic.com/en/docs/build-with-claude/develop-tests" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Testing docs</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Reliability e escalation patterns</div>
+          <div class="topic-desc">Mitigação de alucinações, propagação de erros, padrões de escalação, token-cost reduction, e human-in-the-loop design.</div>
+        </div>
+      </div>
+      <div class="bonus-section">
+        <div class="bonus-title"><i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> Complementar</div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">claudecertifications.com — 25 practice questions + cenários</div>
+          <div class="bonus-item-desc">25 questões cenário-based gratuitas com explicações detalhadas. Deep dive nos 6 cenários do exame com decisões corretas e anti-patterns. Usar como treino de cenários antes da semana final.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://claudecertifications.com/claude-certified-architect/practice-questions" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Practice questions</a><a class="resource-extra" href="https://claudecertifications.com/claude-certified-architect/exam-guide" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Exam guide</a></div>
+        </div>
+        <div class="bonus-item">
+          <div class="bonus-item-name">GitHub — Community Exam Guide (daronyondem)</div>
+          <div class="bonus-item-desc">Guia comunitário open-source com foco em context management e reliability. Bom para perspectiva adicional.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://github.com/daronyondem/claude-architect-exam-guide" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Community exam guide</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 8 -->
+  <div class="week" id="w8">
+    <button type="button" class="week-header" data-toggle="w8" aria-expanded="false">
+      <i class="ti ti-chevron-down chevron" aria-hidden="true"></i>
+      <span class="week-title">Semana 8 — Revisão final e simulados</span>
+      <span class="week-sub">~9h</span>
+      <span class="week-badge b-red">Exame</span>
+    </button>
+    <div class="week-body">
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Revisão dos 5 domínios</div>
+          <div class="topic-desc">Reler anotações, revisar pontos fracos. Focar nos domínios de maior peso: agentic (27%), Claude Code (20%), prompt engineering (20%).</div>
+          <div class="resource-row"><a class="resource-extra" href="https://github.com/paullarionov/claude-certified-architect/blob/main/guide_en.MD" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Study guide — revisão completa</a><a class="resource-extra" href="https://tutorialsdojo.com/claude-agent-sdk/" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Agent SDK Cheat Sheet</a></div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Practice exam oficial + simulados extras</div>
+          <div class="topic-desc">Fazer o simulado oficial no Skilljar (meta: >900/1000). Complementar com as 25 questões do claudecertifications.com, o simulado gratuito do CertificationPractice, e simulados da Udemy se necessário.</div>
+          <div class="resource-row">
+            <a class="resource" href="https://anthropic.skilljar.com" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Anthropic Academy</a>
+            <a class="resource-extra" href="https://claudecertifications.com/claude-certified-architect/practice-questions" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>25 practice questions</a>
+            <a class="resource-extra" href="https://certificationpractice.com/practice-exams/anthropic-claude-certified-architect-foundations" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>CertificationPractice — Simulado</a>
+            <a class="resource-extra" href="https://www.udemy.com/course/claude-certified-architect-foundation-cca-6-practice-tests/?couponCode=FREE-CLAUDE" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Udemy — 6 simulados (360 questões, cupom grátis)</a>
+            <a class="resource-extra" href="https://www.certsafari.com/anthropic/claude-certified-architect" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>CertSafari — 623 questões por domínio</a>
+          </div>
+        </div>
+      </div>
+      <div class="topic-row">
+        <button type="button" class="check-col" aria-pressed="false" aria-label="Marcar tópico como concluído"></button>
+        <div class="topic">
+          <div class="topic-name">Treinar cenários: pensar como arquiteto</div>
+          <div class="topic-desc">O exame sorteia 4 cenários de 6. Para cada área, pergunte: "como eu projetaria isso em produção?" Tradeoffs, failure modes, decisões arquiteturais.</div>
+          <div class="resource-row"><a class="resource-extra" href="https://claudecertifications.com/claude-certified-architect/exam-guide" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Deep dive nos 6 cenários</a><a class="resource-extra" href="https://ravnhq.github.io/claude-certified-architect/practical/pt.html" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:14px" aria-hidden="true"></i>Ravn — Simulado prático PT</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <strong style="font-weight:500">Fontes oficiais Anthropic:</strong> <a href="https://www.anthropic.com/news/claude-partner-network" target="_blank" rel="noopener noreferrer">Claude Partner Network</a> · <a href="https://anthropic.skilljar.com" target="_blank" rel="noopener noreferrer">Anthropic Academy</a> · <a href="https://anthropic.skilljar.com/page/claude-partner-network-learning-path" target="_blank" rel="noopener noreferrer">Partner Learning Path</a><br>
+    <strong style="font-weight:500">Recursos complementares:</strong> <a href="https://github.com/paullarionov/claude-certified-architect" target="_blank" rel="noopener noreferrer">GitHub study guide</a> · <a href="https://ravnhq.github.io/claude-certified-architect/index.html" target="_blank" rel="noopener noreferrer">Ravn study guide (PT)</a> · <a href="https://www.certsafari.com/anthropic/claude-certified-architect" target="_blank" rel="noopener noreferrer">CertSafari (623 questões)</a> · <a href="https://claudecertifications.com" target="_blank" rel="noopener noreferrer">claudecertifications.com</a> · <a href="https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic" target="_blank" rel="noopener noreferrer">DeepLearning.AI MCP</a> · <a href="https://huggingface.co/learn/mcp-course" target="_blank" rel="noopener noreferrer">HF MCP Course</a><br>
+    <strong style="font-weight:500">Artigo de referência:</strong> <a href="https://www.datastudios.org/post/how-to-become-a-claude-certified-architect-current-access-path-partner-requirements-preparation" target="_blank" rel="noopener noreferrer">DataStudios — How to become a Claude Certified Architect</a>
+  </div>
+</div>
+
+<script src="index.js" defer></script>
+</body>
+</html>
